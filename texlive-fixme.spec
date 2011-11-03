@@ -1,3 +1,9 @@
+# revision 16169
+# category Package
+# catalog-ctan /macros/latex/contrib/fixme
+# catalog-date 2009-09-30 20:43:16 +0200
+# catalog-license lppl
+# catalog-version 4.1
 Name:		texlive-fixme
 Version:	4.1
 Release:	1
@@ -69,6 +75,7 @@ support for AUC-TeX.
 #- source
 %doc %{_texmfdistdir}/source/latex/fixme/fixme.dtx
 %doc %{_texmfdistdir}/source/latex/fixme/fixme.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -79,3 +86,5 @@ support for AUC-TeX.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
