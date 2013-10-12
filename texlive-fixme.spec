@@ -1,12 +1,12 @@
-# revision 16169
+# revision 29362
 # category Package
 # catalog-ctan /macros/latex/contrib/fixme
-# catalog-date 2009-09-30 20:43:16 +0200
+# catalog-date 2013-01-28 16:52:26 +0100
 # catalog-license lppl
-# catalog-version 4.1
+# catalog-version 4.2
 Name:		texlive-fixme
-Version:	4.1
-Release:	2
+Version:	4.2
+Release:	1
 Summary:	Insert "fixme" notes into draft documents
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/fixme
@@ -75,17 +75,3 @@ support for AUC-TeX.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 4.1-2
-+ Revision: 751915
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 4.1-1
-+ Revision: 718452
-- texlive-fixme
-- texlive-fixme
-- texlive-fixme
-- texlive-fixme
-
