@@ -6,7 +6,7 @@
 # catalog-version 4.2
 Name:		texlive-fixme
 Version:	4.2
-Release:	4
+Release:	5
 Summary:	Insert "fixme" notes into draft documents
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/fixme
