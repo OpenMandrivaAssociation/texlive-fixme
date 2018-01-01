@@ -1,12 +1,6 @@
-# revision 29362
-# category Package
-# catalog-ctan /macros/latex/contrib/fixme
-# catalog-date 2013-01-28 16:52:26 +0100
-# catalog-license lppl
-# catalog-version 4.2
 Name:		texlive-fixme
-Version:	4.2
-Release:	9
+Version:	4.4
+Release:	1
 Summary:	Insert "fixme" notes into draft documents
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/fixme
@@ -38,33 +32,10 @@ support for AUC-TeX.
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/tex/latex/fixme/fixme.sty
-%{_texmfdistdir}/tex/latex/fixme/layouts/env/fxenvlayoutcolor.sty
-%{_texmfdistdir}/tex/latex/fixme/layouts/env/fxenvlayoutcolorsig.sty
-%{_texmfdistdir}/tex/latex/fixme/layouts/fxlayoutmarginnote.sty
-%{_texmfdistdir}/tex/latex/fixme/layouts/fxlayoutpdfcmargin.sty
-%{_texmfdistdir}/tex/latex/fixme/layouts/fxlayoutpdfcnote.sty
-%{_texmfdistdir}/tex/latex/fixme/layouts/fxlayoutpdfcsigmargin.sty
-%{_texmfdistdir}/tex/latex/fixme/layouts/fxlayoutpdfcsignote.sty
-%{_texmfdistdir}/tex/latex/fixme/layouts/fxlayoutpdfmargin.sty
-%{_texmfdistdir}/tex/latex/fixme/layouts/fxlayoutpdfnote.sty
-%{_texmfdistdir}/tex/latex/fixme/layouts/fxlayoutpdfsigmargin.sty
-%{_texmfdistdir}/tex/latex/fixme/layouts/fxlayoutpdfsignote.sty
-%{_texmfdistdir}/tex/latex/fixme/layouts/target/fxtargetlayoutchangebar.sty
-%{_texmfdistdir}/tex/latex/fixme/layouts/target/fxtargetlayoutcolor.sty
-%{_texmfdistdir}/tex/latex/fixme/layouts/target/fxtargetlayoutcolorcb.sty
-%{_texmfdistdir}/tex/latex/fixme/themes/fxthemecolor.sty
-%{_texmfdistdir}/tex/latex/fixme/themes/fxthemecolorsig.sty
-%{_texmfdistdir}/tex/latex/fixme/themes/fxthemesignature.sty
-%doc %{_texmfdistdir}/doc/latex/fixme/NEWS
-%doc %{_texmfdistdir}/doc/latex/fixme/README
-%doc %{_texmfdistdir}/doc/latex/fixme/THANKS
-%doc %{_texmfdistdir}/doc/latex/fixme/fixme.el
-%doc %{_texmfdistdir}/doc/latex/fixme/fixme.pdf
-%doc %{_texmfdistdir}/doc/latex/fixme/header.inc
+%{_texmfdistdir}/tex/latex/fixme
+%doc %{_texmfdistdir}/doc/latex/fixme
 #- source
-%doc %{_texmfdistdir}/source/latex/fixme/fixme.dtx
-%doc %{_texmfdistdir}/source/latex/fixme/fixme.ins
+%doc %{_texmfdistdir}/source/latex/fixme
 
 #-----------------------------------------------------------------------
 %prep
