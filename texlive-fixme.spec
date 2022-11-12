@@ -1,13 +1,13 @@
 Name:		texlive-fixme
-Version:	4.5
+Version:	63708
 Release:	1
 Summary:	Insert "fixme" notes into draft documents
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/fixme
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fixme.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fixme.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fixme.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fixme.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fixme.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fixme.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -23,12 +23,12 @@ fixme notes will produce an error. FiXme also comes with
 support for AUC-TeX.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -39,7 +39,8 @@ support for AUC-TeX.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
