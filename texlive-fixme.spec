@@ -1,6 +1,6 @@
 Name:		texlive-fixme
 Version:	63708
-Release:	1
+Release:	2
 Summary:	Insert "fixme" notes into draft documents
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/fixme
