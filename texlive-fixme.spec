@@ -3,7 +3,7 @@ Version:	63708
 Release:	2
 Summary:	Insert "fixme" notes into draft documents
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/fixme
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/fixme
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fixme.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fixme.doc.r%{version}.tar.xz
