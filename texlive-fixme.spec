@@ -1,49 +1,35 @@
-Name:		texlive-fixme
-Version:	63708
-Release:	2
-Summary:	Insert "fixme" notes into draft documents
+%global tl_name fixme
+%global tl_revision 77682
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	4.5
+Release:	%{tl_revision}.1
+Summary:	Collaborative annotation tool for LaTeX
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/fixme
-License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fixme.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fixme.doc.r%{version}.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fixme.source.r%{version}.tar.xz
+License:	lppl1.3
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/fixme.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/fixme.doc.r%{tl_revision}.tar.xz
+Source2:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/fixme.source.r%{tl_revision}.tar.xz
 BuildArch:	noarch
+BuildSystem:	texlive
 BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+%texlive_base_requires
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-This package provides a way to insert fixme notes in documents
-being developed (in draft mode). Such notes can appear in the
-margin of the document, as index entries, in the log file and
-as warnings on stdout. It is also possible to summarize them in
-a list. If your document is in a final version, any remaining
-fixme notes will produce an error. FiXme also comes with
-support for AUC-TeX.
+FiXme is a collaborative annotation tool for LaTeX documents. Annotating
+a document here refers to inserting meta-notes, that is, notes that do
+not belong to the document itself, but rather to its development or
+reviewing process. Such notes may involve things of different importance
+levels, ranging from simple "fix the spelling" flags to critical "this
+paragraph is a lie" mentions. Annotations like this should be visible
+during the development or reviewing phase, but should normally disappear
+in the final version of the document. FiXme is designed to ease and
+automate the process of managing collaborative annotations, by offering
+a set of predefined note levels and layouts, the possibility to register
+multiple authors, to reference annotations by listing and indexing etc.
+FiXme is extensible, giving you the possibility to create new layouts or
+even complete "themes", and also comes with support for AUCTeX.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/tex/latex/fixme
-%doc %{_texmfdistdir}/doc/latex/fixme
-#- source
-%doc %{_texmfdistdir}/source/latex/fixme
-
-#-----------------------------------------------------------------------
-%prep
-%setup -c -a1 -a2
-%autopatch -p1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
